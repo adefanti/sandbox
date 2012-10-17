@@ -26,7 +26,7 @@
 		<maven-surefire-plugin.version>2.12.4</maven-surefire-plugin.version>
 		<maven-war-plugin.version>2.3</maven-war-plugin.version>
 		<!-- maven dependencies versions -->
-		<camel.version>2.10.1</camel.version>
+		<camel.version>2.10.2</camel.version>
 		<fest-assert.version>1.4</fest-assert.version>
 		<junit.version>4.10</junit.version>
 		<slf4j.version>1.7.1</slf4j.version>
