@@ -30,7 +30,7 @@
 		<fest-assert.version>1.4</fest-assert.version>
 		<junit.version>4.10</junit.version>
 		<slf4j.version>1.7.1</slf4j.version>
-		<spring.version>3.0.7.RELEASE</spring.version>
+		<spring.version>3.1.2.RELEASE</spring.version>
 	</properties>
 
 	<modules>
@@ -58,7 +58,7 @@
 					<artifactId>camel-maven-plugin</artifactId>
 					<version>${camel.version}</version>
 					<configuration>
-						<duration>5s</duration>
+						<duration>10s</duration>
 						<!-- <configClasses>org.apache.camel.example.spring.javaconfig.MyRouteConfig</configClasses> -->
 						<!-- You could set the base package directory and let spring to find 
 							the config classes for you <basedPackages>org.apache.camel.example.spring.javaconfig</basedPackages> -->
@@ -150,6 +150,31 @@
 				<version>${slf4j.version}</version>
 			</dependency>
 			<!-- Spring -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-asm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-expression</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
