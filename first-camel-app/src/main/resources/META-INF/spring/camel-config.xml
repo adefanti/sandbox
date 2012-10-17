@@ -8,6 +8,8 @@
 	<camelContext xmlns="http://camel.apache.org/schema/spring">
 		<route>
 			<from uri="file:/home/adefanti/Dev/test/camel/in" />
+			<log message="Processing ${id}"/>
+			<log message="Processing file ${file:name}"/>
 			<to uri="file:/home/adefanti/Dev/test/camel/out" />
 		</route>
 		<!-- <packageScan> <package>org.sandbox.camel.routes</package> </packageScan> -->
