@@ -22,29 +22,31 @@ public class UploadRoute extends RouteBuilder {
 
 		from(cxfEndpoint)
 				.to("log:input")
-				.process(new Processor() {
-					@Override
-					public void process(Exchange exchange) throws Exception {
-						FileContainer fileContainer = exchange.getIn().getBody(
-								FileContainer.class);
-						if (fileContainer.getData() != null) {
-							// convert DataHandler to String
-							ByteArrayOutputStream output = new ByteArrayOutputStream();
-							fileContainer.getData().writeTo(output);
-							String body = new String(output.toByteArray());
-
-							// set data (as String) to the file
-							exchange.getOut().setBody(body);
-							// set output filename
-							exchange.getOut().setHeader(
-									Exchange.FILE_NAME,
-									fileContainer.getFileName() + "."
-											+ fileContainer.getFileExtension());
-						} else {
-							LOG.warn("No data found");
-						}
-					}
-				}).log("Creating ${file:name} to disk")
-				.to("file:/home/adefanti/Dev/test/camel/in");
+				.process(new UploadProcessor())
+                .log("Creating ${file:name} to disk")
+				.to("file://inputdir/");
 	}
+
+    private class UploadProcessor implements Processor {
+        public void process(Exchange exchange) throws Exception {
+            FileContainer fileContainer = exchange.getIn().getBody(
+                    FileContainer.class);
+            if (fileContainer.getData() != null) {
+                // convert DataHandler to String
+                ByteArrayOutputStream output = new ByteArrayOutputStream();
+                fileContainer.getData().writeTo(output);
+                String body = new String(output.toByteArray());
+
+                // set data (as String) to the file
+                exchange.getOut().setBody(body);
+                // set output filename
+                exchange.getOut().setHeader(
+                        Exchange.FILE_NAME,
+                        fileContainer.getFileName() + "."
+                                + fileContainer.getFileExtension());
+            } else {
+                LOG.warn("No data found");
+            }
+        }
+    }
 }
