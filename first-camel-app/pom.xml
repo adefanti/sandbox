@@ -101,6 +101,13 @@
 			<groupId>org.easytesting</groupId>
 			<artifactId>fest-assert</artifactId>
 		</dependency>
+
+        <!-- dependencies with scope provided -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
 	</dependencies>
 	
 	<profiles>
@@ -111,7 +118,6 @@
 				<dependency>
 					<groupId>javax.servlet</groupId>
 					<artifactId>servlet-api</artifactId>
-					<version>2.5</version>
 					<scope>compile</scope>
 				</dependency>
 			</dependencies>
