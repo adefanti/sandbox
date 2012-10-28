@@ -7,9 +7,9 @@
 
 	<camelContext xmlns="http://camel.apache.org/schema/spring">
 		<route>
-			<from uri="file:/home/adefanti/Dev/test/camel/in" />
+			<from uri="file://inputdir/" />
 			<log message="Processing file ${file:name}" />
-			<to uri="file:/home/adefanti/Dev/test/camel/out" />
+			<to uri="file://outputdir/" />
 		</route>
 	</camelContext>
 	
