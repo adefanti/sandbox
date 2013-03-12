@@ -24,7 +24,7 @@ public class UploadRoute extends RouteBuilder {
 				.to("log:input")
 				.process(new UploadProcessor())
                 .log("Creating ${file:name} to disk")
-				.to("file://inputdir/");
+				.to("file:target/messages/inputdir");
 	}
 
     private class UploadProcessor implements Processor {
