@@ -34,7 +34,7 @@
 		<junit.version>4.11</junit.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<slf4j.version>1.7.5</slf4j.version>
-        	<spring.version>3.2.2.RELEASE</spring.version>
+		<spring.version>3.2.2.RELEASE</spring.version>
 	</properties>
 
 	<prerequisites>
@@ -68,7 +68,7 @@
 					<configuration>
 						<duration>10s</duration>
 						<!-- <configClasses>org.apache.camel.example.spring.javaconfig.MyRouteConfig</configClasses> -->
-						<!-- You could set the base package directory and let spring to find 
+						<!-- You could set the base package directory and let spring to find
 							the config classes for you <basedPackages>org.apache.camel.example.spring.javaconfig</basedPackages> -->
 					</configuration>
 				</plugin>
@@ -88,10 +88,10 @@
 					<version>${maven-dependency-plugin.version}</version>
 				</plugin>
 				<plugin>
-          				<groupId>org.apache.maven.plugins</groupId>
-				        <artifactId>maven-deploy-plugin</artifactId>
-				        <version>${maven-deploy-plugin.version}</version>
-        			</plugin>
+ 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${maven-deploy-plugin.version}</version>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>
@@ -114,7 +114,7 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>m/home/adefanti/Dev/outils/apache-maven-3.0.5/bin/mvn versions:display-dependency-updatesaven-war-plugin</artifactId>
+					<artifactId>maven-war-plugin</artifactId>
 					<version>${maven-war-plugin.version}</version>
 				</plugin>
 				<plugin>
@@ -122,7 +122,6 @@
 					<artifactId>maven-jetty-plugin</artifactId>
 					<version>${maven-jetty-plugin.version}</version>
 				</plugin>
-
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -146,7 +145,6 @@
 				<version>${servlet-api.version}</version>
 				<scope>provided</scope>
 			</dependency>
-
 			<!-- Apache Camel -->
 			<dependency>
 				<groupId>org.apache.camel</groupId>
@@ -179,11 +177,11 @@
 				<version>${camel.version}</version>
 			</dependency>
 			<!-- Apache CXF -->
-            <dependency>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-                <version>${cxf.version}</version>
-            </dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+				<version>${cxf.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-rt-frontend-jaxws</artifactId>
