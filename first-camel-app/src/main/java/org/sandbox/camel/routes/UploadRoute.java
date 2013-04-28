@@ -28,6 +28,7 @@ public class UploadRoute extends RouteBuilder {
 	}
 
     private class UploadProcessor implements Processor {
+        @Override
         public void process(Exchange exchange) throws Exception {
             FileContainer fileContainer = exchange.getIn().getBody(
                     FileContainer.class);
