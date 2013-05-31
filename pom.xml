@@ -5,7 +5,7 @@
 
 	<groupId>org.sandbox</groupId>
 	<artifactId>sandbox-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Sandbox Parent Project</name>
@@ -29,12 +29,12 @@
 		<maven-war-plugin.version>2.3</maven-war-plugin.version>
 		<!-- maven dependencies versions -->
 		<camel.version>2.11.0</camel.version>
-		<cxf.version>2.7.4</cxf.version>
+		<cxf.version>2.7.5</cxf.version>
 		<fest-assert.version>1.4</fest-assert.version>
 		<junit.version>4.11</junit.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<slf4j.version>1.7.5</slf4j.version>
-		<spring.version>3.2.2.RELEASE</spring.version>
+		<spring.version>3.2.3.RELEASE</spring.version>
 	</properties>
 
 	<prerequisites>
