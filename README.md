@@ -1,4 +1,4 @@
 sandbox
 =======
 
-Development sandbox used to test new technoligies or programming code.
+Development sandbox used to test new technologies or programming code.
