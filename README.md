@@ -1,4 +1,4 @@
-sandbox-app
-===========
+sandbox
+=======
 
-My sand box application
+Development sandbox used to test new technoligies or programming code.
