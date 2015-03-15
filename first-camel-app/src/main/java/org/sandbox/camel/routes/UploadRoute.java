@@ -1,7 +1,5 @@
 package org.sandbox.camel.routes;
 
-import java.io.ByteArrayOutputStream;
-
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
@@ -10,22 +8,24 @@ import org.sandbox.upload.service.UploadWebService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.ByteArrayOutputStream;
+
 public class UploadRoute extends RouteBuilder {
 
-	private final static Logger LOG = LoggerFactory
-			.getLogger(UploadRoute.class);
+    private final static Logger LOG = LoggerFactory
+            .getLogger(UploadRoute.class);
 
-	@Override
-	public void configure() throws Exception {
-		String cxfEndpoint = "cxf:/uploadService?serviceClass="
-				+ UploadWebService.class.getName();
+    @Override
+    public void configure() throws Exception {
+        String cxfEndpoint = "cxf:/uploadService?serviceClass="
+                + UploadWebService.class.getName();
 
-		from(cxfEndpoint)
-				.to("log:input")
-				.process(new UploadProcessor())
+        from(cxfEndpoint)
+                .to("log:input")
+                .process(new UploadProcessor())
                 .log("Creating ${file:name} to disk")
-				.to("file:target/messages/inputdir");
-	}
+                .to("file:target/messages/inputdir");
+    }
 
     private class UploadProcessor implements Processor {
         @Override
