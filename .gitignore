@@ -9,6 +9,7 @@
 target
 
 # Gradle Directories #
+.gradle
 build
 
 # Eclipse Files and Directories #
