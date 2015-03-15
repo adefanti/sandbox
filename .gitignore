@@ -8,6 +8,9 @@
 # Maven Directories #
 target
 
+# Gradle Directories #
+build
+
 # Eclipse Files and Directories #
 *.classpath
 *.project
@@ -17,4 +20,4 @@ target
 *.iml
 *.ipr
 *.iws
-/.idea/
+.idea
