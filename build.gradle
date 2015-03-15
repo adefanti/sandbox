@@ -1,0 +1,21 @@
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+       mavenCentral()
+    }
+
+    dependencies {
+		compile 'org.slf4j:slf4j-api:1.7.10'
+        testCompile 'junit:junit:4.12'
+        testCompile 'org.assertj:assertj-core:1.7.1'
+    }
+
+    version = '1.0-SNAPSHOT'
+
+    jar {
+        manifest.attributes provider: 'gradle'
+    }
+}
+
+
