@@ -28,6 +28,7 @@ public class UploadRoute extends RouteBuilder {
     }
 
     private class UploadProcessor implements Processor {
+
         @Override
         public void process(Exchange exchange) throws Exception {
             FileContainer fileContainer = exchange.getIn().getBody(
@@ -44,7 +45,7 @@ public class UploadRoute extends RouteBuilder {
                 exchange.getOut().setHeader(
                         Exchange.FILE_NAME,
                         fileContainer.getFileName() + "."
-                                + fileContainer.getFileExtension());
+                        + fileContainer.getFileExtension());
             } else {
                 LOG.warn("No data found");
             }

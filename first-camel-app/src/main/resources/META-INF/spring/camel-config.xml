@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://www.springframework.org/schema/beans"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
     	http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-	<camelContext xmlns="http://camel.apache.org/schema/spring">
-		<route>
-			<from uri="file:target/messages/inputdir" />
-			<log message="Processing file ${file:name}" />
-			<to uri="file:target/messages/outputdir" />
-		</route>
-	</camelContext>
+    <camelContext xmlns="http://camel.apache.org/schema/spring">
+        <route>
+            <from uri="file:target/messages/inputdir" />
+            <log message="Processing file ${file:name}" />
+            <to uri="file:target/messages/outputdir" />
+        </route>
+    </camelContext>
 
-	<camelContext xmlns="http://camel.apache.org/schema/spring">
-		<packageScan>
-			<package>org.sandbox.camel.routes</package>
-		</packageScan>
-	</camelContext>
+    <camelContext xmlns="http://camel.apache.org/schema/spring">
+        <packageScan>
+            <package>org.sandbox.camel.routes</package>
+        </packageScan>
+    </camelContext>
 </beans>

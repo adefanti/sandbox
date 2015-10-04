@@ -3,6 +3,7 @@ package org.sandbox.upload.bean;
 import javax.activation.DataHandler;
 
 public class FileContainer {
+
     private String fileName;
     private String fileExtension;
     private DataHandler data;
