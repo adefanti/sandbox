@@ -6,7 +6,7 @@ subprojects {
     }
 
     dependencies {
-	compile 'org.slf4j:slf4j-api:1.7.12'
+	compile 'org.slf4j:slf4j-api:1.7.13'
         testCompile 'junit:junit:4.12'
         testCompile 'org.assertj:assertj-core:2.2.0'
     }
@@ -19,5 +19,5 @@ subprojects {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.7'
+    gradleVersion = '2.9'
 }
